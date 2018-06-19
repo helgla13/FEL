@@ -1,0 +1,46 @@
+language: php
+
+sudo: required
+
+branches:
+  only:
+      - master
+
+cache:
+   directories:
+       - $HOME/.composer/cache
+
+matrix:
+    fast_finish: true
+    include:
+        - php: 7.1
+          env: 'IMAGEMAGICK_SOURCE="ImageMagick-6.9.9-33"'
+        - php: 7.1
+          env: 'IMAGEMAGICK_SOURCE="ImageMagick-7.0.7-21"'
+        - php: 7.2
+          env: 'IMAGEMAGICK_SOURCE="ImageMagick-6.9.9-33"'
+        - php: 7.2
+          env: 'IMAGEMAGICK_SOURCE="ImageMagick-7.0.7-21"'
+
+before_install:
+    - composer self-update
+    - curl https://www.imagemagick.org/download/$IMAGEMAGICK_SOURCE.tar.gz | tar xz
+    - cd $IMAGEMAGICK_SOURCE
+    - ./configure
+    - make
+    - sudo make install
+
+install:
+    - cd ..
+    - composer install --no-interaction
+    - composer require --dev satooshi/php-coveralls:~0.6
+
+script:
+    - mkdir -p build/logs
+    - vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
+
+after_success:
+    - travis_retry php vendor/bin/coveralls -v
+
+notifications:
+    email: pierstoval@gmail.com

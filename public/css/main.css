@@ -1,0 +1,360 @@
+*{
+    font-size: 16px;
+}
+.navbar{
+    background-color: #8bc9e3;
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-brand:hover{
+    color: white;
+    text-decoration: underline;
+}
+.panel{
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 25px;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a{
+    color: white;
+    font-size: 20px;
+}
+
+
+.nav{
+    margin-left: 150px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+footer{
+    background-color: #8bc9e3;
+color: white;
+    margin-top: 15px;
+}
+/*img{*/
+    /*width: 50%;*/
+    /*!*margin-left: 30%;*!*/
+/*}*/
+/*.panel-body{*/
+  /*background-image: url('/img/123.jpg');*/
+    /*width: 100%;*/
+    /*height: 250px;*/
+    /*background-repeat: no-repeat;*/
+    /*color: white;*/
+/*}*/
+/*.panel-body{*/
+    /*background-color: #8bc9e3;*/
+/*}*/
+.phototeacher{
+
+    width: 20%;
+    float: left;
+    /*margin-right: 20px;*/
+}
+.infoteacher{
+    float: left;
+    margin-left: 30px;
+    line-height: 1;
+}
+.want{
+    border: 1px solid #DCDCDC;
+    margin: 10px;
+    width: 314px;
+    text-align: center;
+}
+.want:hover{
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+.wantt{
+    border-bottom: 1px solid #F0FFFF;
+}
+.want img{
+    width: 282px;
+padding-top: 10px;
+}
+.pidgotovka{
+    border-bottom: 1px solid #F0FFFF;
+    text-align: justify;
+    line-height: 1.8;
+    padding-top: 10px;
+}
+.pid .btn{
+    margin-top: 10px;
+}
+#graduates {
+    width: 480px;
+}
+.pid{
+    margin-top: 20px;
+margin-left: 20px;
+    margin-bottom: 20px;
+}
+.spec{
+    padding-left: 20px;
+    text-align: justify;
+    padding-right: 20px;
+    line-height: 1.8;
+}
+td, th{
+    padding: 10px;
+    text-align: center;
+}
+table{
+    margin-bottom: 15px;
+}
+.work{
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.centr{
+    text-align: center;
+}
+iframe{
+    width: 320px;
+    height: 280px;
+}
+.slider{
+    margin-top: 3px;
+}
+#teachabout{
+    line-height: 0.8;
+    float: left;
+    margin-left: 30px;
+}
+.tich{
+    margin-top: 20px;
+    text-align: justify;
+}
+.newsbok{
+    border: 1px solid #D3D3D3;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+padding-bottom: 13px;
+}
+.newsbok p {
+    font-size: 12px;
+    line-height: 0.1;
+}
+.newsbok hr{
+    margin-top: 5px;
+    margin-bottom: 14px;
+}
+.newsbok h3{
+    margin-bottom: 17px;
+}
+.newsab{
+    text-align: justify;
+}
+.newsab img{
+    width: 40%;
+    margin-right: 15px;
+    float: left;
+}
+.newsabb{
+    float: left;
+}
+.newsab h2{
+    text-align: center;
+}
+#dat{
+    margin-top: 20px;
+}
+.kpiart{
+    border: 1px solid #D3D3D3;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.kpiart p{
+    font-size: 12px;
+}
+.flag{
+    width: 30px;
+}
+.lang{
+    text-align: justify;
+    line-height: 2;
+    padding-left: 70px;
+}
+.studleft{
+    border: 1px solid gray;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 10px;
+    color: cornflowerblue;
+}
+.studright{
+    border: 1px solid gray;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #F0F8FF;
+}
+.studpam{
+    border: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 10px;
+    text-align: justify;
+}
+#openimg{
+    margin-left: 10%;
+}
+.opendaystab{
+    width: 100%;
+}
+#cur{
+    width: 90%;
+}
+.studpic{
+    width: 50%;
+    margin-left: 230px;
+    margin-bottom: 15px;
+}
+#studpic2{
+    width: 95%;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+
+.navadmin{
+    width: 150px;
+    border: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.navadmin1{
+    margin-left: 5px;
+
+}
+#aduser{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 50%;
+}
+#adpanel{
+    background-color: #00FFFF;
+}
+.poiskbtn{
+    background-color: #00FFFF;
+}
+.poshuk{
+    background-color: #8bc9e3;
+    text-align: center;
+    padding: 20px;
+}
+#poisk{
+    margin-top: 10px;
+    background-color: #8bc9e3;
+    font-size: 20px;
+    color: white;
+    border: none;
+}
+
+.forma{
+    margin-bottom: 100px;
+   margin-top: 20px;
+}
+.btnsave{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.btnsave a{
+    color: white;
+}
+.edit{
+    background-color: #8bc9e3;
+    border-radius: 10%;
+    border: 1px solid gray;
+}
+
+@media only screen
+and (min-device-width: 1200px)
+    and (max-device-width: 1517px)
+{
+ .want {
+     border: 1px solid #DCDCDC;
+     margin: 10px;
+     width: 30%;
+     text-align: center;
+ }
+    .want img{
+        width: 95%;
+        padding-top: 10px;
+    }
+    #graduates{
+        width: 90%;
+        padding-left: 10%;
+    }
+    .pid{
+        margin-top: 20px;
+    }
+    .nav{
+        margin-left: 2%;
+    }
+    .lang{
+        text-align: justify;
+        line-height: 2;
+        padding-left: 5%;
+    }
+    .newsbok p {
+        font-size: 12px;
+        line-height: 1.1;
+    }
+    #openimg{
+        margin-left: 5%;
+    }
+
+}
