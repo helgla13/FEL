@@ -358,3 +358,88 @@ and (min-device-width: 1200px)
     }
 
 }
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1199px) {
+    .newsbok{
+        display: none;
+    }
+    .kpiart{
+        display: none;
+    }
+    .nav{
+        margin-left: 0%;
+    }
+    .want {
+        border: 1px solid #DCDCDC;
+        margin: 10px;
+        width: 29%;
+        text-align: center;
+    }
+    .want img{
+        width: 95%;
+        padding-top: 10px;
+    }
+    .want h3{
+        font-size: 20px;
+    }
+    .navbar-default .navbar-nav > li > a{
+        font-size: 14px;
+    }
+    #graduates{
+        width: 90%;
+        padding-left: 10%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+    .infoteacher{
+        float: left;
+        margin-left: 30px;
+        line-height: 1;
+        width: 73%;
+    }
+    #teachabout{
+        line-height: 1;
+        float: left;
+        margin-left: 30px;
+        width: 73%;
+    }
+    .lang{
+        text-align: justify;
+        line-height: 2;
+        padding-left: 5%;
+    }
+}
+
+
+
+@media only screen and (max-width : 768px) {
+    .newsbok{
+        display: none;
+    }
+    .kpiart{
+        display: none;
+    }
+    .want{
+        display: none;
+    }
+    .nav{
+        margin-left: 1%;
+    }
+    #graduates{
+        display: none;
+    }
+    .pid{
+        margin-left: 30%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+    .lang{
+        text-align: right;
+    }
+}

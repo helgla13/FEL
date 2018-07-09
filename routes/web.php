@@ -39,6 +39,13 @@ Route::get('/student_life', ['as' => 'pages', 'uses' => 'PageController@student_
 //Route::get('/profile', 'PageController@profile');
 //Route::get('/profile', 'PageController@notprofile');
 Route::get('/file_archive', ['as' => 'pages', 'uses' => 'PageController@file_archive']);
+Route::post('/file_archive', ['as' => 'pages', 'uses' => 'PageController@file_archivePost']);
+
+
+
+
+Route::post('/news/{id}', 'CommentsController@store');
+//Route::get('/news/{id}', 'NewsaboutController@showcomment')->name('newsShow');
 
 
 Route::get('/news/{id}', 'NewsaboutController@index')->name('newsShow');
@@ -63,18 +70,29 @@ Route::group(['prefix' => 'admin',
 //    Route::post('adminka/pages/{id}', 'AdminController@storeadminPages');
     //Route::get('adminka/pages/{id}', 'AdminController@adminPagesselect');
 
-    Route::get('adminka/news', 'AdminController@adminNews');
+    Route::get('adminka/news', 'AdminNewsController@adminNews');
 
-    Route::get('adminka/news/news_add', 'AdminController@adminNewsadd');
-    Route::get('adminka/news/news_edit/{id}', 'AdminController@adminNewsedit')->name('newssShow');
-    Route::post('adminka/news/news_add', 'AdminController@storeadminNewsadd');
-    Route::post('adminka/news/news_edit/{id}', 'AdminController@storeadminNewsedit');
+    Route::get('adminka/news/news_add', 'AdminNewsController@adminNewsadd');
+    Route::get('adminka/news/news_edit/{id}', 'AdminNewsController@adminNewsedit')->name('newssShow');
+    Route::post('adminka/news/news_add', 'AdminNewsController@storeadminNewsadd');
+    Route::post('adminka/news/news_edit/{id}', 'AdminNewsController@storeadminNewsedit');
 
-    Route::get('adminka/teachers', 'AdminController@adminTeachers');
-    Route::get('adminka/teachers/teachers_add', 'AdminController@adminTeachersadd');
-    Route::get('adminka/teachers/teachers_edit/{id}', 'AdminController@adminTeachersedit')->name('teachShow');
-    Route::post('adminka/teachers/teachers_edit/{id}', 'AdminController@storeadminTeachersedit');
+    Route::get('adminka/comments', 'AdminCommentsController@admincomments');
+    Route::post('adminka/comments/{id}/{status}', 'AdminCommentsController@renewcomments');
+
+
+
+    Route::get('adminka/teachers', 'AdminTeachersController@adminTeachers');
+    Route::get('adminka/teachers/teachers_add', 'AdminTeachersController@adminTeachersadd');
+    Route::post('adminka/teachers/teachers_add', 'AdminTeachersController@storeadminTeachersadd');
+    Route::get('adminka/teachers/teachers_edit/{id}', 'AdminTeachersController@adminTeachersedit')->name('teachShow');
+    Route::post('adminka/teachers/teachers_edit/{id}', 'AdminTeachersController@storeadminTeachersedit');
     Route::resource('adminka', 'AdminController');
+
+    Route::get('adminka/teachers/teachers_add/upload',['as' => 'upload_form', 'uses' => 'MyUploadController@getForm']);
+    Route::post('adminka/teachers/teachers_add/upload',['as' => 'upload_file','uses' => 'MyUploadController@upload']);
+
+
 });
 
 //Route::group(['prefix' => 'admin',

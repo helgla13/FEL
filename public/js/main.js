@@ -46,15 +46,15 @@ function myMap() {
 //     );
 // });
 
-$(function() {
-    $(this).find(".dropdown").hover(function() {
-        $(this).find(".dbfirst").slideDown();
-    },
-    function () {
-        $(".dbfirst").slideUp();
-    }
-    );
-});
+// $(function() {
+//     $(this).find(".dropdown").hover(function() {
+//         $(this).find(".dbfirst").slideDown();
+//     },
+//     function () {
+//         $(".dbfirst").slideUp();
+//     }
+//     );
+// });
 
 $(function () {
     $("input[type=checkbox]").click(function(){
@@ -70,5 +70,16 @@ $(function () {
 $(function () {
     $('#poisk').click(function () {
         $( ".poshuk" ).toggle();
+    });
+});
+
+$(function () {
+    $("input[id^='isactivecom']").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "/admin/adminka/comments/"+this.name+'/'+Number(this.checked),
+            data: {
+                "_token": $('#token').val() },
+        })
     });
 });

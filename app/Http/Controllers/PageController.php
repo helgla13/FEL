@@ -20,7 +20,7 @@ class PageController extends Controller
     public function news(){
        //$news =  News::all();
        //dd($news);
-        $news = News::latest('created_at')->get();
+        $news = News::latest('created_at')->paginate(10);
         return view('pages.news', ['news' => $news]);
     }
   //  public function newsleft(){
@@ -88,5 +88,38 @@ class PageController extends Controller
 
         $farh = Page::find(7);
         return view('pages.file_archive')->with('farh', $farh);
+    }
+
+    public function file_archivePost(Request $request){
+//        if(Input::file())
+//        {
+//
+//            $image = Input::file('image');
+//            $filename  = time() . '.' . $image->getClientOriginalExtension();
+//
+//            $path = public_path('/img/' . $filename);
+//
+//
+//            Image::make($image->getRealPath())->resize(200, 200)->save($path);
+////            $user->image = $filename;
+//            $image->save();
+
+
+//        $file = Request::file('file');
+//        $image_name = time()."-".$file->getClientOriginalName();
+//        $file->move('img', $image_name);
+//        $image = Image::make(sprintf('uploads/%s', $image_name))->resize(200, 200)->save();
+
+
+        if ($request->hasFile('input_img')) {
+            $image = $request->file('input_img');
+            $name = $image->getClientOriginalName();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $name);
+          //  $path = $image->storeAs($destinationPath, $name);
+          //  dd($path);
+
+            return back()->with('success','Image Upload successfully');
+        }
     }
 }

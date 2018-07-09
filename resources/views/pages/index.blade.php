@@ -4,7 +4,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="row wantt">
+
         {!! $index->description!!}
+
 
     {{--<div class="col-sm-4 want">--}}
         {{--<img src="/img/ps11.jpg">--}}

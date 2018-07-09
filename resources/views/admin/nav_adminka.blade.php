@@ -5,7 +5,7 @@
         <li><a href="{{ url('admin/adminka/users') }}">Користувачі</a></li>
         <li><a href="{{ url('admin/adminka/pages') }}">Сторінки</a></li>
         <li><a href="{{ url('admin/adminka/news') }}">Новини</a></li>
-        <li><a href="#">Пункт 5</a></li>
+        <li><a href="{{ url('admin/adminka/comments') }}">Коментарі</a></li>
     </ul>
 </div>
 

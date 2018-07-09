@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <form method="POST" action="/admin/adminka/news/news_edit/{{$newss->id}}">
-        {{ csrf_field() }}
+        <form method="POST" action="/admin/adminka/news/news_edit/{{$newss->id}}">
+            {{ csrf_field() }}
         <div class="row">
             <div class="col-sm-12">
 

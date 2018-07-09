@@ -1,7 +1,7 @@
 @extends('admin.adminka.adminka')
 
 @section('content')
-    <form method="POST" action="/admin/adminka/teachers/teachers_add">
+    <form method="POST" action="/admin/adminka/teachers/teachers_add" enctype=multipart/form-data>
         <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
         {{ csrf_field() }}
     <div class="row">
@@ -50,8 +50,12 @@
                 </div>
                 <div class="form-group">
                     <label for="photo">Фото</label>
-                    <p><input type="file" name="photo" multiple accept="image/*,image/jpeg" id="photo">
                 </div>
+
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+                <input type="file" name="input_img">
+
+
             <textarea name="about"></textarea>
                 <button type="submit" class="btn btn-info btnsave">Зберігти</button>
 
