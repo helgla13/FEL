@@ -15,7 +15,7 @@ class CreatePageTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('description',100000)->nullable();
+            $table->text('description')->nullable();
             $table->string('name',100);
             $table->timestamps();
 
@@ -29,6 +29,6 @@ class CreatePageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('page');
+        Schema::dropIfExists('pages');
     }
 }

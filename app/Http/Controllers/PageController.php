@@ -10,49 +10,40 @@ use App\Models\News;
 class PageController extends Controller
 {
     public function index(){
-        $index = Page::find(14);
+        $index = Page::where('name','index')->first();
         return view('pages.index')->with('index', $index);
     }
     public function about(){
-        $about = Page::find(13);
+        $about = Page::where('name','about')->first();
         return view('pages.about')->with('about', $about);
     }
     public function news(){
-       //$news =  News::all();
-       //dd($news);
         $news = News::latest('created_at')->paginate(10);
         return view('pages.news', ['news' => $news]);
     }
-  //  public function newsleft(){
-        //$news =  News::all();
-        //dd($news);
-//        $news = News::orderBy('created_at', 'desc')->limit(2)->get();
-      // $news1='';
-       // return view('layouts.left', ['news1' => $news1]);
-   // }
 
     public function specialization(){
-        $spec = Page::find(12);
+        $spec = Page::where('name','specialization')->first();
         return view('pages.specialization')->with('spec', $spec);
     }
     public function firstzno(){
-        $firstzno = Page::find(4);
+        $firstzno = Page::where('name','firstzno')->first();
         return view('pages.firstzno')->with('firstzno', $firstzno);
     }
     public function firstms(){
-        $firstms = Page::find(5);
+        $firstms = Page::where('name','firstms')->first();
         return view('pages.firstms')->with('firstms', $firstms);
     }
     public function fifthyear(){
-        $fifthyear = Page::find(6);
+        $fifthyear = Page::where('name','fifthyear')->first();
         return view('pages.fifthyear')->with('fifthyear', $fifthyear);
     }
     public function scientific_school(){
-        $sschool = Page::find(1);
+        $sschool = Page::where('name','scientific_school')->first();
         return view('pages.scientific_school')->with('sschool', $sschool);
     }
     public function scientific_groups(){
-        $scgroups = Page::find(2);
+        $scgroups = Page::where('name','scientific_groups')->first();
         return view('pages.scientific_groups')->with('scgroups', $scgroups);
     }
     public function profile()
@@ -65,28 +56,28 @@ class PageController extends Controller
         return view('pages.profile');
 }
     public function opendays(){
-        $opendays = Page::find(3);
+        $opendays = Page::where('name','opendays')->first();
         return view('pages.opendays')->with('opendays', $opendays);
     }
     public function rozklad(){
-        $rozklad = Page::find(11);
+        $rozklad = Page::where('name','rozklad')->first();
         return view('pages.rozklad')->with('rozklad', $rozklad);
     }
     public function kuratory(){
-        $kuratory = Page::find(10);
+        $kuratory = Page::where('name','kuratory')->first();
         return view('pages.kuratory')->with('kuratory', $kuratory);
     }
     public function navchalni_plany(){
-        $navplany = Page::find(9);
+        $navplany = Page::where('name','navchalni_plany')->first();
         return view('pages.navchalni_plany')->with('navplany', $navplany);
     }
     public function student_life(){
-        $studlife = Page::find(8);
+        $studlife = Page::where('name','student_life')->first();
     return view('pages.student_life')->with('studlife', $studlife);
 }
     public function file_archive(){
 
-        $farh = Page::find(7);
+        $farh = Page::where('name','file_archive')->first();
         return view('pages.file_archive')->with('farh', $farh);
     }
 

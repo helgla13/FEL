@@ -16,7 +16,10 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
         // $this->call(UsersTableSeeder::class);
 //        $this->call('NewsSeeder');
+        DB::table('teachers')->delete();
         $this->call('TeachersSeeder');
+        DB::table('pages')->delete();
+        $this->call('PagesSeeder');
     }
 }
 //class NewsSeeder extends Seeder {

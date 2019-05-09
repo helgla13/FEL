@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\News;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,10 +16,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+
         //$news1 = \App\Models\News::latest('created_at')->get();
-        $news1 = \App\Models\News::orderBy('created_at', 'desc')->limit(3)->get();
+        if (Schema::hasTable('news')) {
+            $news1 = \App\Models\News::orderBy('created_at', 'desc')->limit(3)->get();
         view()->share('news1', $news1);
+    }
     }
 
     /**

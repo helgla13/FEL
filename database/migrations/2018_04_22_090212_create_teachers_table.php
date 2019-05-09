@@ -20,7 +20,7 @@ class CreateTeachersTable extends Migration
             $table->string('science_degree')->nullable();
             $table->string('education')->nullable();
             $table->string('course')->nullable();
-            $table->string('about')->nullable();
+            $table->text('about')->nullable();
             $table->string('email')->nullable();
             $table->string('tel')->nullable();
             $table->string('publications')->nullable();
